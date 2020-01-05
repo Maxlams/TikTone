@@ -1,0 +1,282 @@
+/* fonts from Google Fonts: 'Space Mono', 'Anonymous Pro', 'Open Sans' */
+body {
+  text-align: center;
+  background-color: #bbe1fa;
+  font-family: 'Open Sans', sans-serif;
+  color: #0f4c75;
+}
+
+/* ******************************************************** */
+/* CONTAINERS */
+/* ******************************************************** */
+.left-container {
+  text-align: center;
+  border-right: 2px solid #2b2e4a;
+  border-bottom: 2px solid #2b2e4a;
+}
+
+.right-container {
+  display: block;
+  margin: auto;
+  padding-bottom: 3rem;
+}
+
+/* right-container's rows */
+.right-container .row {
+  padding-top: 90px;
+}
+
+#row-3 {
+  display: none;
+}
+
+/* ******************************************************** */
+/*   LEFT CONTAINER ELEMENTS */
+/* ******************************************************** */
+.level-title {
+  text-align: left;
+  font-family: 'Space Mono', monospace;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 4%;
+  padding: 4%;
+  color: #2b2e4a;
+  border-radius: 70px;
+}
+
+.start-button {
+  margin: 0;
+  width: 50%;
+  font-family: 'Space Mono', monospace;
+  font-size: 2rem;
+  color: #0f4c75;
+  border-color: #0f4c75;
+}
+
+.note-img {
+  position: absolute;
+  bottom: 2rem;
+  left: 46%;
+}
+
+/* ******************************* */
+/* INSTRUCTIONS PROPERTIES */
+/* ******************************* */
+.instructions-heading {
+  font-family: 'Anonymous-Pro', monospace;
+  font-size: 2rem;
+}
+
+.instructions-text {
+  font-family: 'Anonymous-Pro', monospace;
+  font-size: 1rem;
+}
+
+/* Large screen instructions */
+.instructions-lg {
+  margin: 7%;
+  text-align: left;
+}
+
+/* Medium screen instructions */
+.instructions-md {
+  display: none;
+  margin: 7%;
+  text-align: center;
+}
+
+/* ******************************* */
+/* FOOTER PROPERTIES */
+/* ******************************* */
+/* Large screen footer */
+.footer-lg {
+  font-size: 0.7rem;
+  color: #6f6f6f;
+  margin: 0;
+  position: absolute;
+  top: 95%;
+  left: 43%;
+}
+
+/* Medium screen footer */
+.footer-md {
+  display: none;
+  font-size: 0.8rem;
+  color: #6f6f6f;
+  margin: 7%;
+}
+
+/* ******************************************************** */
+/*   RIGHT CONTAINER ELEMENTS */
+/* ******************************************************** */
+.noteblock-div {
+  text-align: center;
+  margin: 25px auto 0 auto;
+  display: inline;
+  height: 180px;
+  width: 180px;
+}
+
+.noteblock {
+  height: 180px;
+  width: 180px;
+  border-bottom: 5.5px solid black;
+  border-right: 5.5px solid black;
+}
+
+/* ******************************************************** */
+/*   Conditional classes */
+/* ******************************************************** */
+.pressed {
+  filter: brightness(190%);
+  border-bottom: 0 solid black;
+  border-right: 0 solid black;
+}
+
+.game-started-title-lg {
+  margin-top: 7rem;
+  text-align: center;
+  font-size: 6rem;
+}
+
+.game-over-title {
+  background-color: #e84545;
+  opacity: 0.7;
+}
+
+/* ******************************************************** */
+/*   Media Queries */
+/* ******************************************************** */
+/* ******************************* */
+/* SMALL LAPTOP SIZE */
+/* ******************************* */
+@media (max-width: 1390px) {
+  .level-title {
+    font-size: 4rem;
+  }
+
+  .start-button {
+    font-size: 1.6rem;
+  }
+
+  .instructions-heading {
+    font-size: 1.5rem;
+  }
+
+  .instructions-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* ******************************* */
+/* EVEN SMALLER LAPTOP SIZE */
+/* ******************************* */
+@media (max-width: 991px) {
+
+  /* hide large-specific instructions and footer */
+  .instructions-lg {
+    display: none;
+  }
+
+  .footer-lg {
+    display: none;
+  }
+
+  .level-title {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .start-button {
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .left-container {
+    border-right: 0;
+  }
+
+  .right-container {
+    width: 80%;
+  }
+
+  .game-container .row {
+    padding-top: 40px;
+  }
+
+  .game-started-title-md {
+    margin: 2rem auto 1rem auto;
+  }
+
+  .noteblock-div {
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  .noteblock {
+    max-height: 150px;
+    max-width: 150px;
+  }
+
+  .instructions-md {
+    display: inline;
+  }
+
+  .footer-md {
+    display: inline;
+  }
+}
+
+/* ******************************* */
+/* TABLET SIZE */
+/* ******************************* */
+@media (max-width: 590px) {
+  .noteblock-div {
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+  .noteblock {
+    max-height: 100px;
+    max-width: 100px;
+  }
+
+}
+
+/* ******************************* */
+/* MOBILE SIZE */
+/* ******************************* */
+@media (max-width: 400px) {
+  .level-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .noteblock-div {
+    margin: 5px auto 0 auto;
+    max-height: 70px;
+    max-width: 70px;
+  }
+
+  .noteblock {
+    max-height: 70px;
+    max-width: 70px;
+  }
+
+  #row-1 .banjo-div {
+    display: none;
+  }
+
+  #row-2 .bit-div {
+    display: none;
+  }
+
+  #row-3 {
+    display: flex;
+  }
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,151 @@
+<html lang="en" dir="ltr"><head>
+  <meta charset="utf-8">
+  <title>TikTone</title>
+  <!-- Sounds and (altered) textures courtesy of Mojang. Not to be
+  redistributed or downloaded. Non-commercial.
+  https://account.mojang.com/documents/brand_guidelines  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Open+Sans|Space+Mono&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row game-container">
+
+      <!-- Left container column -->
+      <div class="left-container col-lg-5">
+
+        <!-- Title -->
+        <h1 class="level-title">TikTone.</h1>
+
+        <!-- Start button -->
+        <button type="button" class="start-button btn btn-outline-light" name="button">START</button>
+
+        <!-- Instructions (only shown when screen is LARGE) -->
+        <div class="instructions-lg">
+          <h2 class="instructions-heading">INSTRUCTIONS:</h2>
+          <p class="instructions-text">Press start to begin!
+            A random note will play and you'll have to play the exact same
+            thing. If you're correct, you'll be taken to the next level,
+            where another note plays. Now, you'll have to remember everything
+            you played before, <em>and</em> the random note that just
+            played... for each level!
+          </p>
+        </div>
+
+        <!-- Footer (only shown when screen is LARGE) -->
+        <div class="footer-lg">
+
+          <!-- Note image (only shown when note is PRESSED) -->
+          <img class="note-img hidden" src="images/note.png" alt="note">
+
+          <p>© Max Lam.</p>
+
+        </div>
+
+      </div>
+
+      <!-- Right container column -->
+      <div class="right-container col-lg-7">
+
+        <!-- First row -->
+        <div id="row-1" class="row">
+
+          <!-- ALL DISPLAY -->
+          <div type="button" class="noteblock-div harp-div">
+            <img id="harp" class="noteblock" src="images/noteblock.png" alt="note-block-harp">
+          </div>
+
+          <!-- ALL DISPLAY -->
+          <div type="button" class="noteblock-div bassdrum-div">
+            <img id="bassdrum" class="noteblock" src="images/noteblock-bassdrum.png" alt="note-block-div">
+          </div>
+
+          <!-- FOR LARGE DISPLAY -->
+          <div type="button" class="noteblock-div banjo-div">
+            <img id="banjo" class="noteblock" src="images/noteblock-banjo.png" alt="note-block-banjo">
+          </div>
+
+        </div>
+
+        <!-- Second row -->
+        <div id="row-2" class="row">
+
+          <!-- FOR SMALL DISPLAY -->
+          <div type="button" class="noteblock-div banjo-div hidden">
+            <img id="banjo" class="noteblock" src="images/noteblock-banjo.png" alt="note-block-banjo">
+          </div>
+
+          <!-- ALL DISPLAY -->
+          <div type="button" class="noteblock-div chime-div">
+            <img id="chime" class="noteblock" src="images/noteblock-chime.png" alt="note-block-chime">
+          </div>
+
+          <!-- FOR LARGE DISPLAY -->
+          <div type="button" class="noteblock-div bell-div">
+            <img id="bell" class="noteblock" src="images/noteblock-bell.png" alt="note-block-bell">
+          </div>
+
+          <!-- FOR LARGE DISPLAY -->
+          <div type="button" class="noteblock-div bit-div">
+            <img id="bit" class="noteblock" src="images/noteblock-bit.png" alt="note-block-bit">
+          </div>
+
+        </div>
+
+        <!-- Third row, only shown when size is small -->
+        <div id="row-3" class="row">
+
+          <!-- FOR SMALL DISPLAY -->
+          <div type="button" class="noteblock-div bell-div">
+            <img id="bell" class="noteblock" src="images/noteblock-bell.png" alt="note-block-bell">
+          </div>
+
+          <!-- FOR SMALL DISPLAY -->
+          <div type="button" class="noteblock-div bit-div">
+            <img id="bit" class="noteblock" src="images/noteblock-bit.png" alt="note-block-bit">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Instructions (only shown when screen is MEDIUM or smaller) -->
+    <div class="instructions-md">
+
+      <h2 class="instructions-heading">INSTRUCTIONS:</h2>
+      <p class="instructions-text">Press start to begin!
+        A random note will play and you'll have to play the exact same
+        thing. If you're correct, you'll be taken to the next level,
+        where another note plays. Now, you'll have to remember everything
+        you played before, <em>and</em> the random note that just
+        played... for each level!
+      </p>
+
+    </div>
+
+    <!-- Footer (only shown when screen is MEDIUM or smaller -->
+    <div class="footer-md">
+
+      <p>© Max Lam.</p>
+
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
