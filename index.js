@@ -1,4 +1,4 @@
-// initialize arrays
+// arrays
 var noteblockSounds = [ //sounds
   "harp", "bassdrum", "banjo", "chime", "bell", "bit"
 ];
@@ -6,12 +6,13 @@ var gameOverTextArr = [ // game over text
   "Game over!", "Try again!", "Oh no!", "Almost!", "Continue?", "You died.",
   "Play again?", "Keep trying!", "Aww man.", "Don't give up!"
 ];
+
 var randomNotePattern = []; // game notes
 var playerNotePattern = []; // player's notes
 
 // initialize level
-var started = false; // see if level has started or not
-var level = 0; // initialize level
+var started = false;
+var level = 0;
 
 // ***********************************************************************
 //   EVENTS
@@ -31,7 +32,7 @@ $(".noteblock").click(function() {
 
   // check if the player was right
   checkAnswer(playerNotePattern.length - 1);
-
+  
 });
 
 // ********************************
@@ -49,7 +50,7 @@ $(".start-button").click(function() {
 
   nextLevel();
   started = true;
-
+  
 });
 
 // ***********************************************************************
@@ -94,7 +95,7 @@ function checkAnswer(currentLevel) {
 
       // game over text
       var randomNumberGameOver = Math.floor(Math.random() * gameOverTextArr.length);
-      gameOverText(randomNumberGameOver);
+      $(".level-title").text(gameOverTextArr[randomNumberGameOver]);
 
       // game over sound
       playSound("bassattack");
@@ -108,7 +109,6 @@ function checkAnswer(currentLevel) {
       startOver();
 
     }
-
   }
 }
 
@@ -151,14 +151,5 @@ function animatePress(noteblock) {
   setTimeout(function() {
     $("#" + noteblock).removeClass("pressed");
   }, 60);
-
-}
-
-// RANDOM GAME OVER TEXT
-function gameOverText(randomNum) {
-
-  for (var i = 0; i < gameOverTextArr.length; i++) {
-    $(".level-title").text(gameOverTextArr[randomNum]);
-  }
 
 }
