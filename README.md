@@ -12,6 +12,4 @@ Created using HTML, CSS, and JavaScript. Soon mobile-friendly. Do **not** play t
 - **[Bootstrap](https://getbootstrap.com/)** (4.4.1) - A front-end framework used for responsiveness. Resize the screen and see what happens.
 - **[jQuery](https://jquery.com/)** (3.4.1)
 
-*This site was built using [GitHub Pages](https://pages.github.com/).*
-
 [Simon]: https://en.wikipedia.org/wiki/Simon_(game)
