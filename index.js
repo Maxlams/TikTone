@@ -32,12 +32,12 @@ $(".noteblock").click(function() {
 
   // check if the player was right
   checkAnswer(playerNotePattern.length - 1);
-  
+
 });
 
 // ********************************
-// START BUTTON CLICKS
-$(".start-button").click(function() {
+// START BUTTON CLICKS/TAPS
+$(".start-button").on("click touch", function() {
 
   // hide instructions and start button
   $(".instructions-lg").addClass("hidden");
@@ -50,7 +50,7 @@ $(".start-button").click(function() {
 
   nextLevel();
   started = true;
-  
+
 });
 
 // ***********************************************************************
