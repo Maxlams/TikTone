@@ -1,18 +1,20 @@
+//jshint esversion:6
+
 // arrays
-var noteblockSounds = [ //sounds
+let noteblockSounds = [ //sounds
   "harp", "bassdrum", "banjo", "chime", "bell", "bit"
 ];
-var gameOverTextArr = [ // game over text
+let gameOverTextArr = [ // game over text
   "Game over!", "Try again!", "Oh no!", "Almost!", "Continue?", "You died.",
   "Play again?", "Keep trying!", "Aww man.", "Don't give up!"
 ];
 
-var randomNotePattern = []; // game notes
-var playerNotePattern = []; // player's notes
+let randomNotePattern = []; // game notes
+let playerNotePattern = []; // player's notes
 
 // initialize level
-var started = false;
-var level = 0;
+let started = false;
+let level = 0;
 
 // ***********************************************************************
 //   EVENTS
@@ -23,7 +25,7 @@ var level = 0;
 $(".noteblock").click(function() {
 
   // store the note button that was clicked on in playerNotePattern array
-  var playerClickedNote = $(this).attr("id");
+  let playerClickedNote = $(this).attr("id");
   playerNotePattern.push(playerClickedNote);
 
   // ornaments
@@ -37,7 +39,7 @@ $(".noteblock").click(function() {
 
 // ********************************
 // START BUTTON CLICKS/TAPS
-$(".start-button").on("click touch", function() {
+$(".start-button").on("click touchstart", function() {
 
   // hide instructions and start button
   $(".instructions-lg").addClass("hidden");
@@ -63,8 +65,8 @@ function nextLevel() {
   playerNotePattern = [];
 
   // generate and play random note
-  var randomNumber = Math.floor(Math.random() * 6);
-  var randomNote = noteblockSounds[randomNumber];
+  let randomNumber = Math.floor(Math.random() * 6);
+  let randomNote = noteblockSounds[randomNumber];
   randomNotePattern.push(randomNote);
   animatePress(randomNote);
   playSound(randomNote);
@@ -94,7 +96,7 @@ function checkAnswer(currentLevel) {
       // if player is incorrect...
 
       // game over text
-      var randomNumberGameOver = Math.floor(Math.random() * gameOverTextArr.length);
+      let randomNumberGameOver = Math.floor(Math.random() * gameOverTextArr.length);
       $(".level-title").text(gameOverTextArr[randomNumberGameOver]);
 
       // game over sound
@@ -132,7 +134,7 @@ function startOver() {
 // SOUND
 function playSound(name) {
 
-  var audio = new Audio("sounds/" + name + ".ogg");
+  let audio = new Audio("sounds/" + name + ".ogg");
   audio.play();
 
   // Animate sound effect
